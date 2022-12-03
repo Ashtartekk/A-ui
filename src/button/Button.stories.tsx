@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Button  from './Button';
+import Button  from './index';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -21,6 +21,17 @@ Primary.args = {
   type: 'primary',
   children: 'Button',
 };
+
+export const Basic = ()=>{
+  return<>
+  <Button type='primary'>Primary Button</Button>
+  <Button>Default Button</Button>
+  <Button type='dashed'>Dashed Button</Button>
+  <br />
+  <Button type='text'>Dashed Button</Button>
+  <Button type='link'>Dashed Button</Button>
+  </>
+}
 
 export const Secondary = Template.bind({});
 Secondary.args = {
