@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Button  from './index';
+
+import Button from './index';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -22,14 +23,18 @@ Primary.args = {
   children: 'Button',
 };
 
-export const Basic = ()=>{
-  return<>
-  <Button type='primary'>Primary Button</Button>
-  <Button>Default Button</Button>
-  <Button type='dashed'>Dashed Button</Button>
-  <br />
-  <Button type='text'>Dashed Button</Button>
-  <Button type='link'>Dashed Button</Button>
+const style={
+  marginLeft: 8
+}
+
+export const Basic = () => {
+  return <>
+    <Button type="primary">Primary Button</Button>
+    <Button style={style}>Default Button</Button>
+    <Button type="dashed" style={style}>Dashed Button</Button>
+    <br />
+    <Button type="text">Text Button</Button>
+    <Button type="link" style={style}>Link Button</Button>
   </>
 }
 
