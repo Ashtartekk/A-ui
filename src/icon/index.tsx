@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
-
 import './index.scss';
 
 export interface iconProps extends React.HTMLAttributes<HTMLButtonElement> {
